@@ -3,6 +3,7 @@ const routes = express.Router();
 const OngController = require('./controllers/OngController');
 const IncidentsController = require('./controllers/IncidentsController');
 const ProfileController = require('./controllers/ProfileController');
+const SessionController = require('./controllers/SessionController');
 
 routes.get('/', (req, res) => {
   res.json({
@@ -11,6 +12,7 @@ routes.get('/', (req, res) => {
   });
 });
 
+routes.post('/session', SessionController.create);
 routes.get('/ongs', OngController.index);
 routes.post('/ongs', OngController.create);
 
