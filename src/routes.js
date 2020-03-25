@@ -10,7 +10,7 @@ routes.get('/', (req, res) => {
   });
 });
 
-routes.get('/ongs', OngController.list);
+routes.get('/ongs', OngController.index);
 
 routes.post('/ongs', OngController.create);
 
