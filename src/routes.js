@@ -1,7 +1,7 @@
 const express = require('express');
 const routes = express.Router();
 const OngController = require('./controllers/OngController');
-const connection = require('./database/connection');
+const IncidentsController = require('./controllers/IncidentsController');
 
 routes.get('/', (req, res) => {
   res.json({
@@ -13,5 +13,8 @@ routes.get('/', (req, res) => {
 routes.get('/ongs', OngController.index);
 
 routes.post('/ongs', OngController.create);
+
+routes.get('/incidents', IncidentsController.index);
+routes.post('/incidents', IncidentsController.create);
 
 module.exports = routes;
