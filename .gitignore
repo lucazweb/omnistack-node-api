@@ -2,3 +2,4 @@ node_modules
 src/database/db.sqlite3
 knexfile.js
 .editorconfig
+.prettierrc
