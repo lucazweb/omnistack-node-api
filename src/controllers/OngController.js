@@ -18,6 +18,6 @@ module.exports = {
       city,
       uf,
     });
-    res.json(id);
+    res.json({ id });
   },
 };
